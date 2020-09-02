@@ -113,7 +113,7 @@ fs.readdir(`./commands/`, (err, content) => {
     });
 
     groups.forEach(folder => {
-        fs.readdir(`./commands` + folder, (e, files) => {
+        fs.readdir(`./commands/` + folder, (e, files) => {
             let js_files = files.filter(f => f.split(".").pop() === "js");
 
             if(js_files.length < 1) return console.log(`Please create files in ${folder}`);
